@@ -1,30 +1,3 @@
-<!-- <div class="row">
-    <div class="col-xs-12">
-        <button class="btn btn-success">New Recipe</button>
-         <hr />
-    </div>
-</div>
-<div class="row">
-    <div class="col-xs-12">
-        <a href='#' class="list-group-item clearfix" *ngFor="let recipe of recipes">
-            <div class="pull-left">
-                <h4 class="list-group-item-heading">{{recipe.name}}</h4>
-                <p class="list-group-item-text" >{{recipe.description}}</p>
-            </div>
-            <span class="pull-right">
-                <img [src]="recipe.imagePath" alt="{{recipe.name}}" class="img-responsive" style="max-height: 50px;"/>
-            </span>
-        </a>
-         <app-recipe-item>
-
-        </app-recipe-item>
-    </div>
-</div>
-<app-recipe-item>
-
-</app-recipe-item> -->
-
-
 <div class="row">
     <div class="col-xs-12">
       <div class="btn btn-success">New Recipe</div>
@@ -32,26 +5,10 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-xs-12">
-      <div class="list-group">
-        <a
-          href="#"
-          class="list-group-item list-group-item-action"
-          aria-current="true"
-          *ngFor="let recipe of recipes"
-        >
-          <div class="d-flex w-100 justify-content-around">
-            <div>
-              <h5 class="mb-1">{{ recipe.name }}</h5>
-              <p class="mb-1">{{ recipe.description }}</p>
-            </div>
+    <div class="col-xs-12"  >
+      
   
-            <img [src]="recipe.imagePath" alt="" width="100" height="100" />
-          </div>
-        </a>
-      </div>
-  
-      <app-recipe-item></app-recipe-item>
+      <app-recipe-item (recipeSelected)= "onRecipeSelected(recipe)" [recipeItem]="recipe" *ngFor="let recipe of recipes"></app-recipe-item>
     </div>
   </div>
   

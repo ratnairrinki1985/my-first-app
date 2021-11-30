@@ -1,1 +1,17 @@
-<p>recipe-item works!</p>
+<div class="list-group">
+    <a
+      href="#"
+      class="list-group-item list-group-item-action"
+      aria-current="true"
+      (click) = "OnSelected()"
+    >
+      <div class="d-flex w-100 justify-content-around">
+        <div>
+          <h5 class="mb-1">{{ recipeItem.name }}</h5>
+          <p class="mb-1">{{ recipeItem.description }}</p>
+        </div>
+
+        <img [src]="recipeItem.imagePath" alt="" width="100" height="100" />
+      </div>
+    </a>
+  </div>
